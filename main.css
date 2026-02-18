@@ -2,6 +2,7 @@ html, body {
   overflow: hidden;
   padding: 0;
   margin: 0;
+  background: #000;
 }
 
 .container {
@@ -19,22 +20,8 @@ canvas {
   display: block;
 }
 
-#dust { z-index: 0; }
-#canvas { z-index: 1; }
-
-.clean-btn {
-  z-index: 3;
-  position: fixed;
-  left: 25px;
-  bottom: 15px;
-  font-family: sans-serif;
-  font-size: 15px;
-  color: white;
-  text-shadow: 0 0 10px #000000;
-  user-select: none;
-  cursor: pointer;
-  text-decoration: underline;
-  opacity: .5;
+#dust {
+  z-index: 0;
 }
 
 .name {
