@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WebGL Flowers</title>
+  <link rel="stylesheet" href="./main.css" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- 灰塵層 -->
+    <canvas id="dust"></canvas>
+
+    <!-- 花朵層 -->
+    <canvas id="canvas"></canvas>
+
+    <div class="clean-btn">clean the screen</div>
+  </div>
+
+  <div class="name">
+    點擊畫面種下花朵
+    <div class="subtitle">HT MADE</div>
+  </div>
+
+  <!-- 你的原本 shader 保持不動 -->
+  <script type="x-shader/x-fragment" id="fragmentShader">
+    /* 原本 fragment shader 內容不變 */
+  </script>
+
+  <script type="x-shader/x-vertex" id="vertexShader">
+    varying vec2 vUv;
+    void main() {
+      vUv = uv;
+      gl_Position = vec4(position, 1.);
+    }
+  </script>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
